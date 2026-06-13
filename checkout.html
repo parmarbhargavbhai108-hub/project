@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - CrispyAndDeal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍔 CrispyAndDeal</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="history.html">History</a>
+            <a href="login.html" id="loginLink">Login</a>
+            <a href="#" id="logoutLink" onclick="handleLogout()" style="display: none;">Logout</a>
+            <a href="menu.html">Cart (<span id="cartCount">0</span>)</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Secure Checkout</h2>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+            <!-- Order Summary -->
+            <div class="cart-summary" style="flex: 1; min-width: 300px; max-width: 400px; margin-top: 0;">
+                <h3>Order Summary</h3>
+                <div id="cartItems">
+                    <!-- Cart items will be rendered here -->
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 2px solid #eee;">
+                    <h3>Total to Pay:</h3>
+                    <h3 id="totalAmount" style="color: #ff6b35; font-size: 1.5rem;">₹0</h3>
+                </div>
+            </div>
+
+            <!-- Payment Form -->
+            <div class="form-container" style="flex: 1; min-width: 300px; max-width: 450px; margin: 0;">
+                <h2>Payment Details</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="cvv">CVV</label>
+                            <input type="password" id="cvv" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Pay Now</button>
+                </form>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    🔒 Your payment information is secure and encrypted.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CrispyAndDeal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍔 CrispyAndDeal</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="history.html">History</a>
+            <a href="login.html" id="loginLink">Login</a>
+            <a href="#" id="logoutLink" onclick="handleLogout()" style="display: none;">Logout</a>
+            <a href="menu.html">Cart (<span id="cartCount">0</span>)</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="hero" style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);">
+            <h2>Welcome to CrispyAndDeal</h2>
+            <p>Delicious, crispy food delivered to your doorstep. Fresh, hot, and always a good deal!</p>
+            <a href="menu.html" class="btn" style="background: white; color: #ff6b35;">Order Now</a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <h2 style="color: #ff6b35; margin-bottom: 2rem;">Why Choose Us?</h2>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem;">
+                <div style="padding: 1.5rem; max-width: 300px; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h3 style="color: #ff6b35; margin-bottom: 1rem;">🚀 Fast Delivery</h3>
+                    <p>Get your food hot and fresh in minutes, right at your doorstep.</p>
+                </div>
+                <div style="padding: 1.5rem; max-width: 300px; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h3 style="color: #ff6b35; margin-bottom: 1rem;">💰 Best Prices</h3>
+                    <p>Unbeatable deals on your favorite meals without compromising on quality.</p>
+                </div>
+                <div style="padding: 1.5rem; max-width: 300px; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h3 style="color: #ff6b35; margin-bottom: 1rem;">⭐ Premium Quality</h3>
+                    <p>Made with fresh ingredients and prepared by top chefs for the best taste.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

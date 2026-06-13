@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - CrispyAndDeal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍔 CrispyAndDeal</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="history.html">History</a>
+            <a href="login.html" id="loginLink">Login</a>
+            <a href="#" id="logoutLink" onclick="handleLogout()" style="display: none;">Logout</a>
+            <a href="menu.html">Cart (<span id="cartCount">0</span>)</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Our Delicious Menu</h2>
+        
+        <div class="menu-grid">
+            <!-- Burger -->
+            <div class="menu-item">
+                <img src="burger.png" alt="Burger">
+                <div class="menu-item-content">
+                    <h3>Classic Burger</h3>
+                    <span class="price">₹99</span>
+                    <button class="btn" onclick="addToCart('Classic Burger', 99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Vada Pav -->
+            <div class="menu-item">
+                <img src="vadapav.png" alt="Vada Pav">
+                <div class="menu-item-content">
+                    <h3>Vada Pav</h3>
+                    <span class="price">₹30</span>
+                    <button class="btn" onclick="addToCart('Vada Pav', 30)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- French Fries -->
+            <div class="menu-item">
+                <img src="frenchfries.png" alt="French Fries">
+                <div class="menu-item-content">
+                    <h3>French Fries</h3>
+                    <span class="price">₹60</span>
+                    <button class="btn" onclick="addToCart('French Fries', 60)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Frankie -->
+            <div class="menu-item">
+                <img src="frankie.png" alt="Frankie">
+                <div class="menu-item-content">
+                    <h3>Chicken Frankie</h3>
+                    <span class="price">₹80</span>
+                    <button class="btn" onclick="addToCart('Chicken Frankie', 80)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Summary Section -->
+        <div class="cart-summary">
+            <h3>Your Cart</h3>
+            <div id="cartItems">
+                <!-- Cart items will be rendered here by JavaScript -->
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 2px solid #eee;">
+                <h3>Total Amount:</h3>
+                <h3 id="totalAmount" style="color: #ff6b35;">₹0</h3>
+            </div>
+            <div style="text-align: right; margin-top: 1.5rem;">
+                <a href="checkout.html" class="btn">Proceed to Pay</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
